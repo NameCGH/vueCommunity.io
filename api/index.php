@@ -1,6 +1,6 @@
 <?php
     header("Content-Type:text/html;charset=utf-8;");
-    header("Access-Control-Allow-Origin:http://blog.zxcgh.com");
+    header("Access-Control-Allow-Origin:*");
     
     // 获取get形式传递的参数action，第一种方式在没有传递action键时会提示错误
     // $action = $_GET['action'] ? $_GET['action'] : "index";
