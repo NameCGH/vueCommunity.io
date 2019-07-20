@@ -1,0 +1,241 @@
+/* 清除默认样式 */
+body,ul{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+*{
+    font-size: 15px;
+}
+
+.pageActive{
+    background-color: #333;
+    color: white;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+#header{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+#header>div, #header>div ul{
+    height: 100%;;
+}
+#header>div ul{
+    display: flex;
+    align-items: center;
+}
+#header>div ul li a{
+    display: inline-block;
+    padding: 8px;
+    font-size: 14px;
+    color: #777;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+.main .content{
+    width: 80%;
+    display: flex;
+    padding: 60px 0 30px;
+}
+.main .content .sidebar{
+    border-right: 1px solid #dedede;
+    color: #3F3F5B;
+}
+.main .content .sidebar li{
+    width: 150px;
+    line-height: 2.2em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;   
+    -moz-user-select: none;    
+    -ms-user-select: none;
+}
+
+/* flex布局列表效果不一致 */
+/* .main .content .lists{
+    margin-left: 50px;
+    flex-grow: 1;
+    display: flex;
+    display: -webkit-flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    background: #f4f4f4;
+}
+.main .content .lists .list{
+    flex: 0 0 auto;
+    background: #f4f4f4;
+    border: 1px solid #f0f0f0;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 20%;
+    height: 110px;
+}
+.main .content .lists .list>div{
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}
+.main .content .lists .list>div h4{
+    margin: 0;
+    font-size: 16px;
+    color: #2c9a3a;
+}
+.main .content .lists .list>div .synopsis{
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    margin: 0;
+    height: 40px;
+    border-bottom: 1px solid #ddd;
+}
+.main .content .lists .list>div .btns{
+    display: flex;
+    display: -webkit-flex; 
+    justify-content: space-between;
+    margin: 10px 0 5px;
+}
+.main .content .lists .list>div .btns a{
+    font-size: 12px;
+    padding: 0 10px;
+    line-height: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+.main .content .lists .list>div .btns a:first-child{
+    border: 1px solid #669296;
+    color: #669296;
+} */
+.main .content .sidebar+div{
+    margin-left: 50px;
+    flex-grow: 1;
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+    width: 80%\9;
+    flex-direction: column;
+}
+.main .content .lists{
+    font-size: 0;
+    background: #f4f4f4;
+    box-shadow: 0px 0px 10px #f2f2f2;
+}
+.main .content .lists .list{
+    display: inline-block;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 8px;
+}
+.main .content .lists .list>div{
+    padding: 5px;
+    background-color: #fff;
+}
+.main .content .lists .list>div h4{
+    font-size: 16px;
+    line-height: 25px;
+    height: 25px;
+    margin: 0;
+    overflow: hidden;
+    color: #2c9a3a;
+}
+.main .content .lists .list>div p{
+    margin: 0;
+    font-size: 12px;
+    line-height: 20px;
+    height: 40px;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+.main .content .lists .list>div .btns{
+    margin: 10px 0 5px;
+    display: flex;
+    display: -webkit-flex; 
+    height: 22px;
+    justify-content: space-between;
+}
+.main .content .lists .list>div .btns a:first-child{
+    border: 1px solid #669296;
+    columns: #669296;
+}
+.main .content .lists .list>div .btns a:last-child{
+    border: 1px solid #282e34;
+    color: #282e34;
+}
+.main .content .lists .list>div .btns a{
+    font-size: 12px;
+    line-height: 20px;
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 50px;
+}
+.main .content .page{
+    display: flex;
+    display: -webkit-flex; 
+    flex-grow: 1;
+    justify-content: center;
+    padding-top: 40px;
+}
+.main .content .page ul{
+    display: flex;
+    display: -webkit-flex; 
+}
+.main .content .page li{
+    cursor: pointer;
+    padding: 0 10px;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 0 2px;
+    /* 禁止文本复制 */
+    user-select: none;
+    -webkit-user-select: none;   
+    -moz-user-select: none;    
+    -ms-user-select: none;
+}
+@media(max-width: 1400px) and (min-width: 1120px){
+    .main .content{
+        padding-top: 50px;
+        width: 90%;
+    }
+}
+@media(max-width: 1119px) and (min-width: 940px){
+    .main .content{
+        padding-top: 30px;
+        width: 90%;
+    }
+    .main .content .sidebar li{
+        width: 100px;
+    }
+}
+@media(max-width: 939px){
+    .main .content{
+        width: 100%;
+        padding-top: 20px;
+    }
+    .main .content .sidebar{
+        display: none;
+    }
+    .main .content .sidebar+div{
+        margin-left: 0;
+        padding: 0 20px;
+    }
+}
